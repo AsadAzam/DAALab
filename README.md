@@ -1,6 +1,5 @@
 # DAALab
-
-[![License]https://img.shields.io/badge/License-MIT-green.svg](https://github.com/AsadAzam/DAALab/edit/master/LICENSE.txt)
+![GitHub](https://img.shields.io/github/license/AsadAzam/DAALab)
 
 All lab work of Design and Analysis of Algorithms
 
