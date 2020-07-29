@@ -8,6 +8,7 @@ int main(){
     int count = 0;
     
     int length = (int)(sizeof(a) / sizeof(a[0]));
+    
     for (int i = 0; i < length; i++){
         count += 1;
         if (number == a[i]){
