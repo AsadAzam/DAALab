@@ -1,6 +1,6 @@
 # DAALab
-[![Language]https://img.shields.io/badge/Language-Java-yellow]
-[![License]https://img.shields.io/dub/l/DAALab]
+
+https://img.shields.io/badge/License-MIT-green.svg
 
 All lab work of Design and Analysis of Algorithms
 
