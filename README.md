@@ -6,4 +6,5 @@ All lab work of Design and Analysis of Algorithms
 
 ## LAB 1
 29-July-2020 -> Linear Search
+5-August-2020 -> Binary Search
 
