@@ -2,7 +2,7 @@
 Binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
 
 ### Algorithm
-Given an array A of n elements with values or records A0,A1,A2,…,An−1 sorted such that A0 ≤ A1 ≤A2 ≤ ⋯ ≤A n−1, and target value T, the following subroutine uses binary search to find the index of T in A
+Given an array A of n elements with values or records A0,A1,A2,…,An−1 sorted such that A0 ≤ A1 ≤ A2 ≤ ⋯ ≤ A n−1, and target value T, the following subroutine uses binary search to find the index of T in A
 * Set L to 0 and R to n− 1.
 * If L > R, the search terminates as unsuccessful.
 * Set m (the position of the middle element) to the floor of (L + R)/2, which is the greatest integer less than or equal to (L + R)/2.
