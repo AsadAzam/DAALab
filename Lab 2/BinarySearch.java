@@ -33,6 +33,6 @@ class BinarySearch {
         if (result == -1) 
             System.out.println("Number not present"); 
         else
-        System.out.println("Number found at index : " + result); 
+            System.out.println("Number found at index : " + result); 
     } 
 }
