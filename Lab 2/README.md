@@ -1,0 +1,28 @@
+# What is Binary Search
+Binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
+
+### Algorithm
+Given an array A of n elements with values or records A0,A1,A2,…,An−1 sorted such that A0 ≤ A1 ≤A2 ≤ ⋯ ≤A n−1, and target value T, the following subroutine uses binary search to find the index of T in A
+* Set L to 0 and R to n− 1.
+* If L > R, the search terminates as unsuccessful.
+* Set m (the position of the middle element) to the floor of (L + R)/2, which is the greatest integer less than or equal to (L + R)/2.
+* If Am < T, set L to m + 1 and go to step 2.
+* If Am > T, set R to m - 1 and go to step 2.
+* Now Am = T, the search is done; return m.
+
+### Analysis
+In terms of the number of comparisons, the performance of binary search can be analyzed by viewing the run of the procedure on a binary tree. The root node of the tree is the middle element of the array. The middle element of the lower half is the left child node of the root, and the middle element of the upper half is the right child node of the root. The rest of the tree is built in a similar fashion. Starting from the root node, the left or right subtrees are traversed depending on whether the target value is less or more than the node under consideration.
+
+In the worst case, binary search makes <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\textstyle&space;\lfloor&space;\log&space;_{2}(n)&plus;1\rfloor&space;}" title="{\textstyle \lfloor \log _{2}(n)+1\rfloor }" /> iterations of the comparison loop, where the <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\textstyle&space;\lfloor&space;\rfloor&space;}" title="{\textstyle \lfloor \rfloor }" /> notation denotes the floor function that yields the greatest integer less than or equal to the argument, and log2 is the binary logarithm. This is because the worst case is reached when the search reaches the deepest level of the tree, and there are always <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\textstyle&space;\lfloor&space;\log&space;_{2}(n)&plus;1\rfloor&space;}" title="{\textstyle \lfloor \log _{2}(n)+1\rfloor }" /> levels in the tree for any binary search.
+
+The worst case may also be reached when the target element is not in the array. If n is one less than a power of two, then this is always the case. Otherwise, the search may perform <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\textstyle&space;\lfloor&space;\log&space;_{2}(n)&plus;1\rfloor&space;}" title="{\textstyle \lfloor \log _{2}(n)+1\rfloor }" /> iterations if the search reaches the deepest level of the tree. However, it may make <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\textstyle&space;\lfloor&space;\log&space;_{2}(n)\rfloor&space;}" title="{\textstyle \lfloor \log _{2}(n)\rfloor }" /> iterations, which is one less than the worst case, if the search ends at the second-deepest level of the tree.
+
+On average, assuming that each element is equally likely to be searched, binary search makes 
+<img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\displaystyle&space;\lfloor&space;\log&space;_{2}(n)\rfloor&space;&plus;1-(2^{\lfloor&space;\log&space;_{2}(n)\rfloor&space;&plus;1}-\lfloor&space;\log&space;_{2}(n)\rfloor&space;-2)/n}" title="{\displaystyle \lfloor \log _{2}(n)\rfloor +1-(2^{\lfloor \log _{2}(n)\rfloor +1}-\lfloor \log _{2}(n)\rfloor -2)/n}" /> iterations when the target element is in the array. This is approximately equal to <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\displaystyle&space;\log&space;_{2}(n)-1}&space;i" title="{\displaystyle \log _{2}(n)-1}" /> iterations. When the target element is not in the array, binary search makes <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;{\displaystyle&space;\lfloor&space;\log&space;_{2}(n)\rfloor&space;&plus;2-2^{\lfloor&space;\log&space;_{2}(n)\rfloor&space;&plus;1}/(n&plus;1)}" title="{\displaystyle \lfloor \log _{2}(n)\rfloor +2-2^{\lfloor \log _{2}(n)\rfloor +1}/(n+1)}" /> iterations on average, assuming that the range between and outside elements is equally likely to be searched.
+
+In the best case, where the target value is the middle element of the array, its position is returned after one iteration.
+
+In terms of iterations, no search algorithm that works only by comparing elements can exhibit better average and worst-case performance than binary search. The comparison tree representing binary search has the fewest levels possible as every level above the lowest level of the tree is filled completely. Otherwise, the search algorithm can eliminate few elements in an iteration, increasing the number of iterations required in the average and worst case. This is the case for other search algorithms based on comparisons, as while they may work faster on some target values, the average performance over all elements is worse than binary search. By dividing the array in half, binary search ensures that the size of both subarrays are as similar as possible.
+
+### Space complexity
+Binary search requires three pointers to elements, which may be array indices or pointers to memory locations, regardless of the size of the array. Therefore, the space complexity of binary search is O(1)
