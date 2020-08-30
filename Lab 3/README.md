@@ -1,0 +1,20 @@
+# What is Merge Search
+Merge sort (also commonly spelled mergesort) is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. Merge sort is a divide and conquer algorithm that was invented by John von Neumann in 1945.
+
+### Algorithm
+Conceptually, a merge sort works as follows:
+* Divide the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
+* Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.
+
+### Analysis
+In sorting n objects, merge sort has an average and worst-case performance of <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;O\left&space;(&space;n\log&space;n&space;\right&space;)" title="O\left ( n\log n \right )" />. If the running time of merge sort for a list of length n is <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;T\left&space;(&space;n&space;\right&space;)" title="T\left ( n \right )" />, then the recurrence <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;T\left&space;(&space;n&space;\right&space;)&space;=&space;2T\left&space;(&space;\frac{n}{2}&space;\right&space;)&plus;n" title="T\left ( n \right ) = 2T\left ( \frac{n}{2} \right )+n" /> follows from the definition of the algorithm (apply the algorithm to two lists of half the size of the original list, and add the n steps taken to merge the resulting two lists). The closed form follows from the master theorem for divide-and-conquer recurrences.
+
+In the worst case, the number of comparisons merge sort makes is given by the sorting numbers. These numbers are equal to or slightly smaller than <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;\left&space;(&space;n&space;\left&space;\lceil&space;\lg&space;n&space;\right&space;\rceil&space;-&space;2\left&space;\lceil&space;\lg&space;n&space;\right&space;\rceil&space;&plus;&space;1&space;\right&space;)" title="\left ( n \left \lceil \lg n \right \rceil - 2\left \lceil \lg n \right \rceil + 1 \right )" /> which is between <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;\left&space;(&space;n&space;\ln&space;n&space;-&space;n&space;&plus;&space;1\right)" title="\left ( n \ln n - n + 1\right)" /> and <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;\left&space;(&space;n\lg&space;n&space;&plus;&space;n&space;&plus;&space;O\left&space;(&space;\lg&space;n&space;\right&space;)&space;\right&space;)" title="\left ( n\lg n + n + O\left ( \lg n \right ) \right )" />.
+
+For large n and a randomly ordered input list, merge sort's expected (average) number of comparisons approaches α·n fewer than the worst case where <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;\alpha&space;=-1&plus;\sum&space;_{k=0}^{\infty&space;}{\frac&space;{1}{2^{k}&plus;1}}\approx&space;0.2645" title="\alpha =-1+\sum _{k=0}^{\infty }{\frac {1}{2^{k}+1}}\approx 0.2645" />
+
+In the worst case, merge sort does about 39% fewer comparisons than quicksort does in the average case. In terms of moves, merge sort's worst case complexity is <img src="https://latex.codecogs.com/svg.latex?\fn_phv&space;O\left&space;(&space;n\log&space;n&space;\right&space;)" title="O\left ( n\log n \right )" /> — the same complexity as quicksort's best case, and merge sort's best case takes about half as many iterations as the worst case.
+
+Merge sort is more efficient than quicksort for some types of lists if the data to be sorted can only be efficiently accessed sequentially, and is thus popular in languages such as Lisp, where sequentially accessed data structures are very common. Unlike some (efficient) implementations of quicksort, merge sort is a stable sort.
+
+Merge sort's most common implementation does not sort in place; therefore, the memory size of the input must be allocated for the sorted output to be stored in.
