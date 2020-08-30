@@ -8,7 +8,7 @@ int binarySearch(int arr[], int first, int last, int x) {
         if (arr[mid] == x) 
             return mid; 
   
-        /// If x greater, ignore left half
+        // If x greater, ignore left half
         if (arr[mid] > x) 
             return binarySearch(arr, first, mid - 1, x); 
   
