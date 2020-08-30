@@ -24,12 +24,14 @@ int binarySearch(int arr[], int first, int last, int x) {
   
 int main(void) {
     int arr[] = { 2, 3, 4, 10, 40 };
-    int x = 10;
+    printf("Enter a number to be found : ");
+    int number;
+    scanf("%d", &number);
     int n = sizeof(arr) / sizeof(arr[0]);
-    int result = binarySearch(arr, 0, n - 1, x);
+    int result = binarySearch(arr, 0, n - 1, number);
     if (result == -1)
-        printf("Element is not present in array");
+        printf("Element is not present in array\n");
     else
-        printf("Element is present at index : %d", result);
+        printf("Element is present at index : %d\n", result);
     return 0;
 }
