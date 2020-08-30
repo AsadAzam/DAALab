@@ -6,5 +6,10 @@ All lab work of Design and Analysis of Algorithms
 
 ## LAB 1
 29-July-2020 -> Linear Search <br />
-5-August-2020 -> Binary Search
+## LAB 2
+5-August-2020 -> Binary Search <br />
+## LAB 3
+12-August-2020 -> Merge Sort <br />
+## LAB 4
+19-August-2020 -> Quick Sort
 
