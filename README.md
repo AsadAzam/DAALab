@@ -11,5 +11,6 @@ All lab work of Design and Analysis of Algorithms
 ## LAB 3
 12-August-2020 -> Merge Sort <br />
 ## LAB 4
-19-August-2020 -> Quick Sort
-
+19-August-2020 -> Quick Sort <br />
+## LAB 5
+16-September-2020 -> Dijkstra's Algorithm
