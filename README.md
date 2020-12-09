@@ -13,4 +13,12 @@ All lab work of Design and Analysis of Algorithms
 ## LAB 4
 19-August-2020 -> Quick Sort <br />
 ## LAB 5
-16-September-2020 -> Dijkstra's Algorithm
+16-September-2020 -> Dijkstra's Algorithm <br />
+## LAB 6
+23-September-2020 -> Prim's and Kruskal's Algorithm<br />
+## LAB 7
+21-October-2020 -> Knapsack Problem<br />
+## LAB 8
+4-November-2020 -> N-Queens and Optimal Merge Pattern<br />
+## LAB 9
+25-November-2020 -> Floyd-Warshall Algorithm <br />
